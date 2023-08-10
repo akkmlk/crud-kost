@@ -49,9 +49,7 @@
                 <div class="col-lg-10">
                     <select name="jenis" aria-label="Default select example" class="form-control text-light bg-transparent border border-dark @error('jenis') is-invalid @enderror">
                         @foreach ($kamars as $kamar)
-                            <option value="{{ $kamar->id }}" @if($select_penghuni->id == "{{ $select_penghuni->id }}") selected @endif class="text-dark">{{ $kamar->jenis_kamar }}</option>
-                            {{-- <option value="2" @if($select_penghuni->kamar_id == "2") selected @endif class="text-dark">sedang</option>
-                            <option value="3" @if($select_penghuni->kamar_id == "3") selected @endif class="text-dark">besar</option> --}}
+                            <option value="{{ $kamar->id }}" @selected(old('jenis', $select_penghuni->kamar_id) == $kamar->id) class="text-dark">{{ $kamar->jenis_kamar }}</option>
                         @endforeach
                     </select>
                     @error('jenis')
