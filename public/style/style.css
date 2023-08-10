@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-container {
+    /* background: linear-gradient(to left, #618ce7, #0236a7); */
+    background-color: #618ce7;
+}
+
+.main-container {
+    height: 100vh;
+    background: linear-gradient(to right, #2b68ec, #012c88);
+}
